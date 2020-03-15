@@ -67,3 +67,4 @@ Detail Items
 
 ## Data Source
 - [github.com/CSSEGISandData/COVID-19](https://github.com/CSSEGISandData/COVID-19)
+- [worldometers.info/coronavirus](https://www.worldometers.info/coronavirus)
