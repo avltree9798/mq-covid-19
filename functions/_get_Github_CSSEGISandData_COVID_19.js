@@ -93,7 +93,7 @@ module.exports = () => {
                 console.log("Start: _get_Github_CSSEGISandData_COVID_19 => " + idx.detail);
                 s3.putObject({
                     ACL: "public-read",
-                    Bucket: 'mq-covid-19-update',
+                    Bucket: process.env.BUCKET_NAME,
                     Key: idx.detail,
                     Body: JSON.stringify(result),
                     ContentType: "application/json"
@@ -107,7 +107,7 @@ module.exports = () => {
         console.log("Start: _get_Github_CSSEGISandData_COVID_19 => api/data.json");
         s3.putObject({
             ACL: "public-read",
-            Bucket: 'mq-covid-19-update',
+            Bucket: process.env.BUCKET_NAME,
             Key: 'api/data.json',
             Body: JSON.stringify(indexData),
             ContentType: "application/json"
