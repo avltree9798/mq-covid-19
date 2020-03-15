@@ -64,3 +64,6 @@ Detail Items
 | confirmed      | Total number of confirmed cases |
 | deaths         | Total number of deaths cases    |
 | recovered      | Total number of recovered cases |
+
+## Data Source
+- [github.com/CSSEGISandData/COVID-19](https://github.com/CSSEGISandData/COVID-19)
