@@ -82,7 +82,7 @@ let _getIndex = () => {
 };
 
 
-module.exports = () => {
+module.exports = (callback) => {
     console.log("Start: _get_Github_CSSEGISandData_COVID_19");
     _getIndex().then((indexData) => {
         let s3 = new AWS.S3();
@@ -115,6 +115,7 @@ module.exports = () => {
             if (err) {
                 console.log(err);
             }
+            callback();
         });
     });
 };
