@@ -8,5 +8,3 @@ exports.handler = (event, context, callback) => {
         _get_Worldometers_Cases_COVID_19();
     });
 };
-
-exports.handler();

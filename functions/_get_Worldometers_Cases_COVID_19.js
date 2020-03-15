@@ -48,15 +48,17 @@ let doMappingData = (finalData) => {
 
         if (currDate !== latestData) {
             // create new data with currDate
+            console.log("create new data");
             selectedKey = (latestData + '').split('T')[0];
             parsedData.items.push({
                 date: currDate,
-                name: "Data for " + selectedKey + " GMT",
-                detail: "api/data/" + selectedKey + ".json",
+                name: "Data for " + currKeyObject + " GMT",
+                detail: "api/data/" + currKeyObject + ".json",
                 file_name: "-",
                 updated_at: moment(),
             });
         } else {
+            console.log("update latest data");
             selectedKey = currDate.split('T')[0];
             parsedData.items[parsedData.items.length - 1].updated_at = moment();
         }
