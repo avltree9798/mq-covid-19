@@ -1,4 +1,4 @@
-# COVID-19 Scraper  
+# COVID-19   
 
 ## Background  
 
