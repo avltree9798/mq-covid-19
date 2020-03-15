@@ -6,29 +6,29 @@ Inspired by [CSSEGISandData/COVID-19](https://github.com/CSSEGISandData/COVID-19
 
 This project also aims to provide reliable information or data related to COVID-19 by collecting or aggregating information or data from reliable and trusted sources and make it publicly available and easy to consume programmatically to support the creativity of the community to develop or build an application related to COVID-19  
 
-## API Documentation  
+## API Documentation 
 
-Base URL: https://mq-covid-19-update.s3.ap-southeast-1.amazonaws.com  
+```ruby
+base_url: "https://mq-covid-19-update.s3.ap-southeast-1.amazonaws.com"
+```
 
-### Listing Cases Data
+### Case Index by Date
 
-#### Request  
+#### Request
 
-| Name   | Value                                                        |
-| ------ | ------------------------------------------------------------ |
-| URL    | [{{base_url}}/api/data.json](https://mq-covid-19-update.s3.ap-southeast-1.amazonaws.com/api/data.json) |
-| Method | GET                                                          |
+```ruby
+url: "{base_ur}/api/data.json"
+method: "GET"
+```
 
 #### Response
 
-**data.json**
-
 | Attribute  | Description                                                  |
 | ---------- | ------------------------------------------------------------ |
-| items      | **data.json @ items**                                        |
+| items      | **Index Items**                                              |
 | scraped_at | Timestamp when the data is scraped from the source, <br />Example: `2020-03-15T05:08:05.072Z` |
 
-**data.json @ items**
+**Index Items**
 
 | Attribute  | Description                                   |
 | ---------- | --------------------------------------------- |
@@ -38,26 +38,24 @@ Base URL: https://mq-covid-19-update.s3.ap-southeast-1.amazonaws.com
 | file_name  | Data source file name                         |
 | updated_at | Timestamp when the data souce update the data |
 
-### Detail of Case Data
+### Case Detail by Date
 
-#### Request  
+#### Request
 
-| Name   | Value                                           |
-| ------ | ----------------------------------------------- |
-| URL    | {{base_url}}/api/data/{{date(YYYY-MM-DD)}}.json |
-| Method | GET                                             |
+```ruby
+url: "{base_ur}/api/data/{YYYY-MM-DD}.json"
+method: "GET"
+```
 
 #### Response
 
-**data/{{date(YYYY-MM-DD)}}.json**
-
 | Attribute  | Description                                                  |
 | ---------- | ------------------------------------------------------------ |
-| items      | **data/{{date(YYYY-MM-DD)}}.json @ items**                   |
-| updated_at | Timestamp when the data souce update the data                |
+| items      | **Detail Items**                                             |
 | scraped_at | Timestamp when the data is scraped from the source, <br />Example: `2020-03-15T05:08:05.072Z` |
+| updated_at | Timestamp when the data souce update the data                |
 
-**data/{{date(YYYY-MM-DD)}}.json @ items**
+Detail Items
 
 | Attribute      | Description                     |
 | -------------- | ------------------------------- |
